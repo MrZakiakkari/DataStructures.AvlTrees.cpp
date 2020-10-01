@@ -14,10 +14,10 @@ const int PrintMenuCode = 3;
 
 void PrintMenu() {
 
-	cout << "Type " << InsertItemCode << " Insert an itmeVL Tree" << endl;
-	cout << "Type " << InsertItemCode << " to print the AVL Tree" << endl;
-	cout << "Type " << InsertItemCode << " to Print the Menu." << endl;
-	cout << "Type " << InsertItemCode << " To Exit the program." << endl;
+	cout << "Type " << InsertItemCode << " to insert an item to the AVL Tree" << endl;
+	cout << "Type " << PrintCode << " to print the AVL Tree" << endl;
+	cout << "Type " << PrintMenuCode << " to Print the Menu." << endl;
+	cout << "Type " << ExitCode << " To Exit the program." << endl;
 
 }
 void InValidOption() {
