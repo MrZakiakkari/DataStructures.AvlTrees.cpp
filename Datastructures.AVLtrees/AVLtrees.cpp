@@ -94,7 +94,7 @@ void AVLtree<T>::Insert(AvlTreeNode<T>*& tree, T item, bool& taller)
 		{
 			switch (tree->balanceFactor)
 			{
-			case LeftHigher: LeftBalance(tree, taller);	break;
+			case LeftHigher: BalanceLeft(tree, taller);	break;
 			case EqualHeight: tree->balanceFactor = LeftHigher;	break;
 			case RightHigher: tree->balanceFactor = EqualHeight;	taller = false; break;
 			}
@@ -108,7 +108,7 @@ void AVLtree<T>::Insert(AvlTreeNode<T>*& tree, T item, bool& taller)
 		// Insert into right subtree if (taller)
 		switch (tree->balanceFactor)
 		{
-		case RightHigher: RightBalance(tree, taller); break;
+		case RightHigher: BalanceRight(tree, taller); break;
 		case EqualHeight: tree->balanceFactor = RightHigher; break;
 		case LeftHigher: tree->balanceFactor = EqualHeight; taller = false; break;
 		}
