@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-
+#include "AvlTrees.cpp"
 using namespace std;
 
 
@@ -10,6 +10,7 @@ const int InsertItemCode = 1;
 const int PrintCode = 2;
 const int ExitCode = 4;
 const int PrintMenuCode = 3;
+
 
 
 void PrintMenu() {
@@ -24,15 +25,27 @@ void InValidOption() {
 	cout << "Invalid option entered." << endl;
 	PrintMenu();
 }
+
+AVLtree<int>* avlTree = new AVLtree<int>();
+
 void InsertTree() {
 	cout << "Insert Item " << endl;
-
+	avlTree->InsertItem(1);
+	avlTree->InsertItem(2);
 }
 
 void PrintAVLTree() {
 	cout << "PrintAVLTree" << endl;
+	cout << "AVL TREE";
+	avlTree->PrintTree();
+}
+
+void InitializeAvlTree()
+{
 
 }
+
+
 
 int main()
 {
@@ -40,6 +53,8 @@ int main()
 	int option = -1;
 
 	PrintMenu();
+
+	InitializeAvlTree();
 	do
 	{
 		cin >> option;

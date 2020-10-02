@@ -60,6 +60,8 @@ AVLtree<T>::~AVLtree()
 
 }
 
+
+
 template<class T>
 void AVLtree<T>::InsertItem(T item)
 // Calls recursive function Insert to insert item into tree.
@@ -112,6 +114,7 @@ void AVLtree<T>::Insert(AvlTreeNode<T>*& tree, T item, bool& taller)
 		}
 	}
 }
+
 
 template<class T>
 void AVLtree<T>::PrintTree()
@@ -501,3 +504,5 @@ void RotateLeft(AvlTreeNode<T>*& tree)
 		tree = rs;
 	}
 }
+
+
